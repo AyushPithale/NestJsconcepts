@@ -15,4 +15,10 @@ export class AppController {
     // using the injected service to get the data from getHello() method
     return this.appService.getHello();
   }
+
+
+  @Get('name')
+  getName(): string {
+    return this.appService.getName();
+  }
 }

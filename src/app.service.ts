@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { json } from 'stream/consumers';
 
 
 // @Injectable() decorator is used to mark a class as a provider
@@ -11,5 +12,9 @@ import { Injectable } from '@nestjs/common';
 export class AppService {
   getHello(): string {
     return 'Hello World!';
+  }
+
+  getName(): string {
+    return JSON.stringify({ name: 'John Doe' });
   }
 }
